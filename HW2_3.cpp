@@ -80,15 +80,18 @@ int ugly_num_generate(int n)
     }
 }
 
-int main01()
+int main()
 {
     for(int i=1;i<12;i++)
     {
         cout<<ugly_num_generate(i)<<endl;
     }
+    int n;
+    cin>>n;
+    cout<<ugly_num_generate(n)<<endl;
 }
 
-int main()
+int main01()
 {
     // input
     int k=0;
