@@ -67,11 +67,27 @@ int ugly_num(int n)
     }
 }
 
+int ugly_num_best(int n)
+{
+    if(n==1) return 1;
+    else
+    {
+        while(n%2==0)
+            n=n/2;
+        while(n%3==0)
+            n=n/3;
+        while(n%5==0)
+            n=n/5;
+        if(n==1) return 1;
+        else if(n!=1) return 0;
+    }
+}
+
 int ugly_num_generate(int n)
 {
     for(int q=1;;q++)
     {
-        if(ugly_num(q)==1)
+        if(ugly_num_best(q)==1)
         {
             n--;
             if(n<=0)
